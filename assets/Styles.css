@@ -1,0 +1,15 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 0.5;
+  }
+
+.jumbotron {
+    background-image: linear-gradient(to right, rgb(3, 39, 245) , rgb(1, 9, 80));
+    text-align: center;
+    color: white;
+    margin: 10px;
+    font-size: x-small;
+   
+    
+}

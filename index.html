@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/Styles.css" />
+    <title>Weather Dashboard</title>
+  </head>
+
+  <body>
+    <!--blue header-->
+    <header class="jumbotron">
+      <h1 class="display-3">Weather Dashboard</h1>
+    </header>
+
+    <section class="container">
+        <div class="row">
+
+
+
+          <!--left side starts-->  
+          <div class="col-sm-4">
+            <!--search form-->
+            <div class="content content-form container">
+                <form id="search-form">
+                  <legend class="form-title">Search for a city </legend>
+                  <input name="City" id="searchCity" class="input" type="text" placeholder="Enter City"/>
+                  <br><br>
+                  <button id="create-search" class="button is-success is-responsive is-focused" type="submit" data-toggle="modal" data-target="#city-form-modal">
+                    Search
+                  </button>
+                </form>
+            </div>
+
+
+
+            <!--previous search results-->
+            <div></div>
+
+
+
+          </div>
+
+
+
+          <!--right side starts-->
+          <div class="col-sm-8 row">
+            <div class="col-sm-9">
+
+
+
+                <!--current forecast-->
+                <article>
+                    <h3 class="futpredic-title">5-Day Forecast</h3>
+                </article>
+
+
+
+
+              <!--5-day forecast cards-->
+              <div class="row row-cols-5">
+                <div class="col card">
+                  <div class="date">Date</div>
+                  <div class="weather-icon">Weather Icon</div>
+                  <div class="temp">Temp</div>
+                  <div class="wind-speed">Wind speed</div>
+                  <div class="humidity">Humidity</div>
+                </div>
+                <div class="col card">
+                    <div class="date">Date</div>
+                    <div class="weather-icon">Weather Icon</div>
+                    <div class="temp">Temp</div>
+                    <div class="wind-speed">Wind speed</div>
+                    <div class="humidity">Humidity</div>
+                </div>
+                <div class="col card">
+                    <div class="date">Date</div>
+                    <div class="weather-icon">Weather Icon</div>
+                    <div class="temp">Temp</div>
+                    <div class="wind-speed">Wind speed</div>
+                    <div class="humidity">Humidity</div>
+                </div>
+                <div class="col card">
+                    <div class="date">Date</div>
+                    <div class="weather-icon">Weather Icon</div>
+                    <div class="temp">Temp</div>
+                    <div class="wind-speed">Wind speed</div>
+                    <div class="humidity">Humidity</div>
+                </div>
+                <div class="col card">
+                    <div class="date">Date</div>
+                    <div class="weather-icon">Weather Icon</div>
+                    <div class="temp">Temp</div>
+                    <div class="wind-speed">Wind speed</div>
+                    <div class="humidity">Humidity</div>
+                </div>
+
+
+
+              </div>
+
+            </div>
+          </div>
+
+
+
+
+        </div>
+    </section>
+
+
+    <script src="assets/script.js"></script>
+  </body>
+
