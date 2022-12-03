@@ -7,13 +7,22 @@ A simple weather app where you could type in a city name, and current weather fo
 
 
 
+
+
 ## TECHNOLOGIES:
 Powered by JS, HTML, and CSS
 
 
-## SCREENSHOT OF THE SITE: 
+
+
+
+## HOW THE SITE LOOKS: 
+![Screenshot of my weather dashboard page](dashboard.jpg)
+
+
 
 
 
 ## DEPLOYED LINK: 
+https://phuonghoang68.github.io/Weather-dashboard/
 
