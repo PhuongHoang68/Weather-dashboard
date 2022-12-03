@@ -9,6 +9,15 @@
   background-color: royalblue;
 }
 
+#forecast {
+  display: flex;
+
+}
+.mini-card{
+  margin: 10px;
+  background-color: royalblue;
+  color: white;
+}
 .today-weather-card {
   background-color: #f8f9fa!important;
   border: 1px solid rgba(0,0,0,.125);

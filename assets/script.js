@@ -60,13 +60,19 @@ function searchForecast(searchInput) {
 
   for (var i=0; i<data.list.length; i++) {
       if (data.list[i].dt_txt.indexOf("09:00:00") !== -1) {
-          var cardCity = $("<h5>").text(data.city.name + " | " + new Date (data.list[i].dt_txt));
+        console.log(dayjs(data.list[i].dt_txt).format("DD/MM/YYYY"))
+        var cardContainer= $("<div>")
+          var cardCity = $("<h5>").text(data.city.name + " | " + dayjs(data.list[i].dt_txt).format("DD/MM/YYYY"));
           var forecastTemp = $("<p>").text(data.list[i].main.temp + "\u00B0F");
           var forecastHumidity = $("<p>").text(data.list[i].main.humidity + "%");
 
+          cardContainer.addClass("mini-card")
+
+          cardContainer.append(cardCity, forecastTemp, forecastHumidity);
 
 
-          $("#forecast").append(cardCity, forecastTemp, forecastHumidity);
+
+          $("#forecast").append(cardContainer);
 
 
 
