@@ -17,7 +17,7 @@ Powered by JS, HTML, and CSS
 
 
 ## HOW THE SITE LOOKS: 
-![Screenshot of my weather dashboard page](dashboard.jpg)
+![Screenshot of my weather dashboard page](dashboard.png)
 
 
 
