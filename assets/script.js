@@ -45,25 +45,28 @@
             var Status = $("<div>").addClass("btn btn-md").text(uvResponse.current.uvi)
             var Card = $("<h5>").text("UV Index: ");
  
+        
+        //UV Index safety
         if (uvResponse.current.uvi <= 3) {
             Status.addClass("safe");
         } else if (uvResponse.current.uvi < 7 && uvResponse.current.uvi > 3) {
-            Status.addClass("questionable");
+            Status.addClass("concerning");
         } else {
-            Status.addClass("dangerous");
+            Status.addClass("unsafe");
         }
  
-        $("#today-weather").append(Status.append(Card));
+        $("#current-info").append(Status.append(Card));
     });
   }  
  
+  //the weather of current day
   function findWeather(searchInput) {
     $.ajax({
         url: "https://api.openweathermap.org/data/2.5/weather?q=" + searchInput + "&appid=8a0b187f58134a2e51bff5ae31b7377e&units=imperial",
         method: "GET"
     }).then(function (apiResponse) {
  
-    $("#today-weather").empty();
+    $("#current-info").empty();
    
     if (findHistory) {
         findHistory.push(searchInput);
@@ -72,17 +75,17 @@
     }
  
     var city = $("<h4>").text(apiResponse.name + " (" + new Date().toLocaleDateString() + ")");
-    var humidity = $("<div>").addClass("today-weather-stats").text("Humidity: " + apiResponse.main.humidity + "%");
-    var temperature = $("<div>").addClass("today-weather-stats").text("Temp: " + apiResponse.main.temp + "\u00B0F");
+    var humidity = $("<div>").addClass("current-info").text("Humidity: " + apiResponse.main.humidity + "%");
+    var temperature = $("<div>").addClass("current-info").text("Temp: " + apiResponse.main.temp + "\u00B0F");
    
-    $("#today-weather").append(city, temperature, humidity)
+    $("#current-info").append(city, temperature, humidity)
     findForecast (searchInput);
     findUv(apiResponse.coord.lat, apiResponse.coord.lon)
     })
   }
  
   //Runs the search Weather Function upon Button Click
-  $("#search-button").on("click", function(event) {
+  $("#search-weather").on("click", function(event) {
     event.preventDefault();
     var searchInput = $("#form1").val();  
     console.log(searchInput);

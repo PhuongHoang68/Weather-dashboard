@@ -1,12 +1,14 @@
 .jumbotron {
   width: 100vw;
   height: 12.5vh;
-  background-color: lightskyblue;
-  background-image: linear-gradient(90deg, rgb(0, 166, 255), blue);
+  background-color: lightpink;
+  background-image: linear-gradient(90deg, #FFA69E, #861657);
 }
-
+#search-weather {
+  background-color: #f79289;
+}
 .forecast-card {
-  background-color: royalblue;
+  background-color: rgb(243, 107, 129);
 }
 
 #forecast {
@@ -15,23 +17,23 @@
 }
 .mini-card{
   margin: 10px;
-  background-color: royalblue;
+  background-color: rgb(253, 172, 185);
   color: white;
 }
-.today-weather-card {
+.current-info-card {
   background-color: #f8f9fa!important;
-  border: 1px solid rgba(0,0,0,.125);
-  padding: 1.5rem;
+  border: 2px solid rgba(0,0,0,.125);
+  padding: 2rem;
 }
 
 .safe {
-  background-color: forestgreen;
+  background-color: rgba(125, 223, 125, 0.895);
 }
 
-.questionable {
+.concerning {
   background-color: yellow;
 }
 
-.dangerous {
+.unsafe {
   background-color: red;
 }
